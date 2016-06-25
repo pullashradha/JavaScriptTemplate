@@ -25,9 +25,9 @@ Spec 1 | Example Input: | Example Output:
 
 ## Future Features
 
-HTML | CSS Styling | JavaScript
------ | ----- | -----
-Example Feature 1 | Example Feature 1 | Example Feature 1
+HTML | CSS | JavaScript | C#
+----- | ----- | ----- | -----
+Example Feature 1 | Example Feature 1 | Example Feature 1 | Example Feature 1
 
 ## Support and Contact Details
 
