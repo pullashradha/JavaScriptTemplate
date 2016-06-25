@@ -6,6 +6,7 @@
 
 ## Description
 
+Longer succinct description of program.
 
 ## Setup/Installation Requirements
 
@@ -26,6 +27,7 @@ Spec 1 | Example Input: | Example Output:
 
 HTML | CSS Styling | JavaScript
 ----- | ----- | -----
+Example Feature 1 | Example Feature 1 | Example Feature 1
 
 ## Support and Contact Details
 
