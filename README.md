@@ -41,6 +41,7 @@ Contact Epicodus for support in running this program.
 * Font Awesome
 * jQuery
 * JavaScript
+* C#
 
 ## Links
 
