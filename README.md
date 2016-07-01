@@ -25,9 +25,9 @@ Spec 1 | Example Input: | Example Output:
 
 ## Future Features
 
-HTML | CSS | JavaScript | C#
------ | ----- | ----- | -----
-Example Feature 1 | Example Feature 1 | Example Feature 1 | Example Feature 1
+HTML | CSS | JavaScript
+----- | ----- | -----
+Example Feature 1 | Example Feature 1 | Example Feature 1
 
 ## Support and Contact Details
 
@@ -41,14 +41,12 @@ Contact Epicodus for support in running this program.
 * Font Awesome
 * jQuery
 * JavaScript
-* C#
 
 ## Links
 
 * Git Hub Webpage: https://pullashradha.github.io/
-* Git Hub Repository: https://github.com/pullashradha/
 
-### License
+## License
 
 *This software is licensed under the GPL license.*
 
