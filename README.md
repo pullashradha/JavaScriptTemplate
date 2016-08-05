@@ -11,7 +11,12 @@ Longer succinct description of program.
 ## Setup/Installation Requirements
 
 * Clone this repository
-* Open index.html in Terminal
+* To set up package managers, type the following into the command line:
+  * $ npm install
+  * $ bower install
+* To view the webpage, type the following:
+  * $ gulp build
+  * $ gulp server
 
 ## Known Bugs
 
