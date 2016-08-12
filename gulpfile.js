@@ -1,3 +1,4 @@
+//Dependencies & Variables
 var gulp = require ("gulp");
 var browserify = require ("browserify");
 var source = require ("vinyl-source-stream");
@@ -23,6 +24,7 @@ var lib = require('bower-files') ({
 
 var buildProduction = utilities.env.production;
 
+//Concat/Minify & Browserify
 gulp.task ("concatInterface", function() {
   return gulp.src (["./js/*-interface.js"])
     .pipe (concat("allConcat.js"))
@@ -42,6 +44,7 @@ gulp.task ("minifyScripts", ["jsBrowserify"], function() {
     .pipe (gulp.dest("./build/js"));
 });
 
+//Bower
 gulp.task ("bowerJS", function() {
   return gulp.src (lib.ext("js").files)
     .pipe (concat("vendor.min.js"))
@@ -66,6 +69,7 @@ gulp.task ("cssBuild", function() {
 
 gulp.task ("bower", ["bowerJS", "bowerCSS"]);
 
+//Clean & Build
 gulp.task ("clean", function() {
   return del (["build", "tmp"]);
 });
@@ -80,10 +84,25 @@ gulp.task ("build", ["clean"], function() {
   gulp.start ("cssBuild");
 });
 
+//JShint
 gulp.task ("jshint", function() {
   return gulp.src (["js/*.js"])
     .pipe (jshint())
     .pipe (jshint.reporter("default"));
+});
+
+//Server
+gulp.task ("server", function() {
+  browserSync.init ({
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
+  });
+  gulp.watch (["js/*.js"], ["jsBuild"]);
+  gulp.watch (["scss/*.scss"], ["cssBuild"]);
+  gulp.watch (["bower.json"], ["bowerBuild"]);
+  gulp.watch (["*.html"], ["htmlBuild"]);
 });
 
 gulp.task ("jsBuild", ["jsBrowserify", "jshint"], function() {
@@ -96,17 +115,4 @@ gulp.task ("bowerBuild", ["bower"], function() {
 
 gulp.task ("htmlBuild", function() {
   browserSync.reload();
-});
-
-gulp.task ("server", function() {
-  browserSync.init ({
-    server: {
-      baseDir: "./",
-      index: "index.html"
-    }
-  });
-  gulp.watch (["js/*.js"], ["jsBuild"]);
-  gulp.watch (["scss/*.scss"], ["cssBuild"]);
-  gulp.watch (["bower.json"], ["bowerBuild"]);
-  gulp.watch (["*.html"], ["htmlBuild"]);
 });

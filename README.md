@@ -10,6 +10,8 @@ Longer succinct description of program.
 
 ## Setup/Installation Requirements
 
+This program can only be accessed on computer with Git and Atom software and npm, bower, and gulp globally installed.
+
 * Clone this repository
 * To set up package managers, type the following into the command line:
   * $ npm install
@@ -49,7 +51,7 @@ Contact Epicodus for support in running this program.
 
 ## Links
 
-* Git Hub Webpage: https://pullashradha.github.io/
+* Git Hub Repository: https://github.com/pullashradha/
 
 ## License
 
